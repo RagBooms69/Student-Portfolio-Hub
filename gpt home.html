@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portfolio Platform</title>
+    <link rel="stylesheet" href="gpt style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">PortfolioHub</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Academic</a></li>
+                <li><a href="#">Extracurricular</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Welcome to PortfolioHub</h1>
+        <p>Your centralized platform to showcase academic and extracurricular achievements.</p>
+        <a href="sign up.html" class="cta-button">Get Started</a>
+    </section>
+
+    <section class="overview">
+        <h2>Platform Overview</h2>
+        <!-- Features Section -->
+        <div class="feature">
+            <img src="matt-ragland-02z1I7gv4ao-unsplash.jpg" alt="Upload Icon">
+            <p>Easy uploads</p>
+        </div>
+        <!-- Add more feature sections as needed -->
+    </section>
+
+    <section class="how-it-works">
+        <h2>How It Works</h2>
+        <!-- Step-by-Step Guide Section -->
+        <div class="step">
+            <img src="icon-step-1.png" alt="Step 1 Icon">
+            <p>Sign up for free.</p>
+        </div>
+        <!-- Add more steps as needed -->
+    </section>
+
+    <section class="services">
+        <h2>Our Services</h2>
+        <div class="service">
+            <h3>Academic Portfolio</h3>
+            <p>Brief description of academic portfolio features.</p>
+            <!-- Add illustrations or icons representing academic achievements -->
+        </div>
+        <div class="service">
+            <h3>Extracurricular Portfolio</h3>
+            <p>Brief description of extracurricular portfolio features.</p>
+            <!-- Add illustrations or icons representing extracurricular activities -->
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <h2>User Testimonials</h2>
+        <!-- Quotes from Users Section -->
+        <div class="testimonial">
+            <p>"PortfolioHub has been an amazing tool for showcasing my achievements. Highly recommended!"</p>
+            <p class="user-info">- John Doe, Computer Science Major</p>
+        </div>
+        <!-- Add more testimonials as needed -->
+    </section>
+
+    <section class="privacy-security">
+        <h2>Privacy and Security</h2>
+        <p>Rest assured, your data is encrypted and stored securely. Your privacy is our top priority.</p>
+    </section>
+
+    <section class="get-started">
+        <h2>Get Started</h2>
+        <p>Sign up for free and start showcasing your achievements today!</p>
+        <a href="login2.html" class="cta-button">Sign Up Now</a>
+    </section>
+
+    <section class="slider-container">
+        <div class="slider-wrapper">
+            <!-- Add more slider items as needed -->
+            <div class="slider-item">
+                <a href="link1.html"><img src="image1.jpg" alt="Slider Image 1"></a>
+            </div>
+            <div class="slider-item">
+                <a href="link2.html"><img src="image2.jpg" alt="Slider Image 2"></a>
+            </div>
+            <!-- Add more slider items as needed -->
+        </div>
+        <div class="slider-arrow prev" onclick="prevSlide()">&#10094;</div>
+        <div class="slider-arrow next" onclick="nextSlide()">&#10095;</div>
+    </section>
+
+    <footer>
+        <div class="about-us">
+            <h3>About Us</h3>
+            <p>Brief information about the platform's mission, vision, and team.</p>
+        </div>
+        <div class="contact-us">
+            <h3>Contact Us</h3>
+            <p>Contact details for inquiries or support.</p>
+        </div>
+        <div class="legal">
+            <a href="#">Terms of Service</a>
+            <a href="#">Privacy Policy</a>
+        </div>
+        <div class="social-media">
+            <h3>Connect with Us</h3>
+            <!-- Add social media icons and links as needed -->
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // JavaScript for the slider
+        let currentIndex = 0;
+        const totalSlides = document.querySelectorAll('.slider-item').length;
+
+        function nextSlide() {
+            if (currentIndex < totalSlides - 1) {
+                currentIndex++;
+            } else {
+                currentIndex = 0;
+            }
+            updateSlider();
+        }
+
+        function prevSlide() {
+            if (currentIndex > 0) {
+                currentIndex--;
+            } else {
+                currentIndex = totalSlides - 1;
+            }
+            updateSlider();
+        }
+
+        function updateSlider() {
+            const sliderWrapper = document.querySelector('.slider-wrapper');
+            const slideWidth = document.querySelector('.slider-item').clientWidth;
+            sliderWrapper.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
+        }
+    </script>
+</body>
+</html>

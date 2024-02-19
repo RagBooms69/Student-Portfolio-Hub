@@ -1,0 +1,165 @@
+/* Reset some default styles */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-size: larger;
+}
+
+header {
+    background-color: #f0f0f0;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #4c6baf;
+    color: #fff;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #fff;
+    color: #4c6daf;
+    text-decoration: none;
+    border-radius: 6px;
+    margin-top: 20px;
+}
+
+.overview {
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+.feature {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.feature img {
+    width: 120px;
+    height: 120px;
+}
+
+.how-it-works {
+    padding: 40px 20px;
+    background-color: #f0f0f0;
+}
+
+.step {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.step img {
+    width: 50px;
+}
+
+.services {
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+.service {
+    margin-bottom: 20px;
+}
+
+.testimonials {
+    padding: 40px 20px;
+    background-color: #f0f0f0;
+}
+
+.testimonial {
+    margin-bottom: 20px;
+}
+
+.privacy-security {
+    padding: 40px 20px;
+    background-color: #ffffff;
+}
+
+.get-started {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #4c6baf;
+    color: #fff;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer div {
+    flex: 1;
+    margin: 10px;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Add more styling as needed */
+.slider-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider-item {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Navigation arrows style */
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}

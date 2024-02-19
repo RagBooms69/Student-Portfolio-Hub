@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f0f0f0;
+            background-image: url(matt-ragland-02z1I7gv4ao-unsplash.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .login-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #555;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .signup-link {
+            color: #fff;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        a{
+            color: azure;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Student Login</h2>
+        <form id="student-login" class="login-form" onsubmit="validateStudentLogin()">
+            <div class="form-group">
+                <label for="student-username">Username:</label>
+                <input type="text" id="student-username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="student-password">Password:</label>
+                <input type="password" id="student-password" name="password" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Login</button>
+            </div>
+        </form>
+
+        <div class="footer">
+            <p>New to portfolio hub? - <span class="signup-link" onclick="redirectToSignup()" ><a href="sign up.html">Sign In...</a></span></p>
+            <div>
+                <h3>About Us</h3>
+                <p>We are here to generate your proffesional portfolio on the basis of your study and any proffesional skills or experiences.</p>
+            </div>
+            <div>
+                <!-- <h3>Our Services</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut quam felis.</p> -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function validateStudentLogin() {
+            const studentUsername = document.getElementById('student-username').value;
+            const studentPassword = document.getElementById('student-password').value;
+
+            if (studentUsername === studentPassword) {
+                alert('Student Login Successful');
+            } else {
+                alert('Invalid Student Credentials');
+            }
+
+            // You can also redirect to another page or perform additional actions based on the validation result
+        }
+
+        function redirectToSignup() {
+            // Replace the URL with the actual URL of the new account sign-in page
+            window.location.href = 'new-account-signin.html';
+        }
+    </script>
+</body>
+</html>
